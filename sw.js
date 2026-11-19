@@ -1,9 +1,9 @@
 /* Service worker: permite abrir la app sin internet.
    Al publicar cambios en index.html, sube el número de versión para forzar la actualización. */
-const VERSION = 'vida-tiempos-v8';
+const VERSION = 'vida-tiempos-v9';
 const SHELL_CACHE = 'vida-shell';            // copia de la página principal (la app también la guarda desde la página)
 const SHELL = new URL('./', self.location).href;
-const ASSETS = ['./manifest.webmanifest', './icon.svg', './icon-192.png', './icon-512.png'];
+const ASSETS = ['./manifest.webmanifest', './icon.svg', './icon-192.png', './icon-512.png', './icon-maskable-512.png'];
 
 /* Netlify puede redirigir /index.html → /. Chrome no acepta servir una respuesta
    "redirigida" a una navegación (muestra el dinosaurio), así que se guarda una copia limpia. */

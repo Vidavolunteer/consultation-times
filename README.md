@@ -1,4 +1,7 @@
-# VIDA · Tiempos de atención (Costa Rica y Guatemala)
+# Tic Tac · VIDA Consultation Times
+
+Tic Tac es el nombre de la app; el logo de Vida aparece en la esquina derecha del encabezado.
+
 
 App web instalable en el celular que registra los tiempos de atención de cada familia, funciona **sin internet** y envía los datos a **Google Sheets** cuando hay conexión.
 
@@ -60,20 +63,21 @@ window.VIDA_CONFIG = {
 
 `TOKEN` es opcional. Es una clave sencilla contra envíos accidentales: si la usas, pon el mismo texto en `const TOKEN` de `Code.gs` y vuelve a implementar.
 
-## Paso 4. Publicar la app (gratis, con HTTPS)
+## Paso 4. Publicar la app (GitHub Pages, gratis, con HTTPS)
 
-El modo sin internet necesita HTTPS. Elige una opción:
+**Dirección actual de la app:** https://vidavolunteer.github.io/consultation-times/
+(repositorio `consultation-times` de la cuenta de GitHub `vidavolunteer`).
 
-**Opción A · Netlify Drop (la más fácil, sin programar)**
-1. Entra a <https://app.netlify.com/drop> e inicia sesión.
-2. Arrastra la carpeta `vida-tiempos` completa.
-3. Obtendrás un enlace `https://algo.netlify.app`. Puedes cambiarle el nombre en *Site configuration*. Ese es el enlace para los intérpretes.
-4. Para actualizar la app, vuelve a arrastrar la carpeta en *Deploys*.
+> No uses Netlify con esta cuenta: su asistente («Dropped files» / «Agent runs») publica solo `index.html` y descarta `sw.js`, los íconos y el manifest, y sin `sw.js` la app no abre sin internet.
 
-**Opción B · GitHub Pages**
-1. Crea un repositorio, sube los archivos de la carpeta.
-2. *Settings → Pages → Deploy from a branch → main / root*.
-3. El enlace será `https://usuario.github.io/repositorio/`.
+**Para publicar una versión nueva:**
+1. Entra a github.com → repositorio **consultation-times**.
+2. Haz clic en **Add file → Upload files**.
+3. Arrastra **los archivos** de la carpeta (no la carpeta). Los que tienen el mismo nombre se reemplazan.
+4. Haz clic en **Commit changes**. En 1 o 2 minutos la versión nueva está publicada.
+5. Comprueba que https://vidavolunteer.github.io/consultation-times/sw.js muestre código.
+
+Los teléfonos reciben la versión nueva la próxima vez que abren la app con internet.
 
 ## Paso 5. Instrucciones para los intérpretes
 
